@@ -1,3 +1,4 @@
-.div1 {
-    background-color: aqua;
+.div1 a {
+    /* Display block é usado para manter os elementos um abaixo do outro */
+    display: block;
 }
