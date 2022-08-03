@@ -110,4 +110,37 @@ div {
    margin-top: 0px;
 }
 
+.contato {
+   background-color:#1c81c0;
+}
 
+.contato iframe {
+   width: 60%;
+   height: 500px;
+}
+
+.contato p {
+   color: #ffffff;
+   background-color: #1d1d1d;
+   padding: 15px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+.contato ul {
+   margin: 40px auto 40px auto;
+   width: 210px;
+}
+
+.contato li {
+   margin-top: 15px;
+   text-align: center;
+   font-size: 18px;
+}
+
+.contato li a {
+   background-color: #ffffff;
+   color:#1d80c1;
+   padding: 2px 5px;
+   border-radius: 5px;
+}
