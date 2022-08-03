@@ -1,4 +1,119 @@
-.div1 a {
+html {
+    background-color: blue;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.div1  {
+    background-color: rgb(142, 202, 255);
+    margin: 0px;
+    width: 100%;
+}
+
+.div1 a, iframe,h1,h2,h3,h4,h5,h6  {
     /* Display block é usado para manter os elementos um abaixo do outro */
     display: block;
+    margin: 0px;
 }
+
+.div1 p {
+    margin: 0px;
+    /* Colocando estilo da fonte */
+    font-family: 'Verdana';
+
+    /* Tamanho da fonte */
+    font-size: 15px;
+
+    /* Expessura da fonte 
+        font-weight: normal; -> Fonte normal
+        font-weight: bold; -> Fonte mais grossa
+    */
+    font-weight: bold;
+    
+
+    /* Aplicando linhas em texto
+    text-decoration: underline; -> Linha em baixo do texto
+    text-decoration: overline; -> Linha por cima do texto
+    text-decoration: none; -> Retira as linhas
+    */
+    text-decoration: underline;
+    
+
+    /* Alinhando textos 
+        text-align:left; -> Alinha os textos para a esquerda
+        text-align:center; -> Alinha os textos para o centro
+        text-align:right; -> Alinha os textos para a direita
+    */
+    text-align: center;
+
+    /* Definindo altura das linhas
+        line-height: 24px; -> Cada linha do parágrafo possui 24px de altura
+    */
+    line-height: 30px;
+}
+
+/*************************************************************************************************************/
+
+.div2{
+    background-color: rgb(190, 190, 190);
+    width: 100%;
+    padding: 10px;
+
+    /* Largura da borda */
+    border-width: 2px;
+
+    /* Estilo da borda
+        border-style: solid; -> Borda sólida
+        border-style: dashed; -> Borda tracejada
+        border-style: dotted; -> Borda pontilhada
+        para acessar uma lista de estilos, basta usar as teclas ctrl + space
+    */
+    border-style: solid;
+    /* Sem o estilo definido, a borda não aparece */
+
+    /* Cor da borda */
+    border-color: brown;
+
+    /* Arredondamento de bordas */
+    border-radius: 10px 20px 30px 40px;
+
+    /* Maneira resumida de usar borda
+        border: 2px dashed red;
+        Primeiro valor é a grossura da borda
+        Segundo valor é o estilo da borda
+        Terceiro valor é a cor da borda
+    */
+
+}
+.div2 p{
+    /* Margin
+    margin: 10px; -> Essa margem representa a distância para todos os lados do elemento.
+    margin-top: 10px; -> Margem para a parte superiror
+    margin-right: 10px; ->  Margem para a esquerda
+    margin-bottom: 10px -> Margem para a base
+    margin-left: 10px; -> Margem para a esquerda
+    margin: 10px 20px; -> Margem para, respectivamente, 10px para topo e base, 20px para os lados
+    margin: 10px 20px 30px 40px; -> Margem para, respectivamente, topo, direita, base e esquerda
+
+    Uma maneira de centralizar um elemento usando margin é:
+    margin: 10px auto; -> Isso faz com que as margens dos lados tenham o mesmo tamanho calculado automaticamente.
+
+    Utilizando o valor 0 na margin, a margem do objeto é removida
+
+    */
+    margin: 0px;
+
+    /* Padding
+    Espaço interno que fica ao redor do conteúdo do elemento, Serve para gerar espaços dentro do elemento
+    Suas sintaxes são iguais ao do margin
+    padding: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-lef: 10px;
+    padding: 10px 20px;
+    padding: 10px 20px 30px 40px;
+    */
+}
+

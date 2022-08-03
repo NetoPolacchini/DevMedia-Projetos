@@ -38,7 +38,7 @@
 
 </head>
 <body>
-    <div class="div1">
+    <div class="div1" id="1">
 
         <!-- Tag usada para títulos -->
         <h1>Título de nível 1</h1>
@@ -52,10 +52,61 @@
         <!-- Usado para separar textos ou conteúdos que estão relacionados, como imagens links, textos -->
         <p>Ola, sou um parágrafo</p>
 
-        <!-- Usado para criar links de redicionamento -->
-        <a href="https://www.google.com.br"> Google </a>
+        <!-- Tag span é utilizada para fazer marcações de lugares onde queremos destacar. -->
+        <p>Ola, sou um parágrafo que possui uma tag <span>span</span> dentro dele</p>
+
+        <!-- Usado para criar links de redicionamento para outras páginas -->
+        <a href="https://www.google.com.br"> Google na mesma guia </a>
+
+        <!-- Abrir a página em uma outra guia -->
+        <a href="https://www.google.com.br" target="_blank"> Google em outra guia </a>
+        <!-- 
+            target="_self" -> Valor padrão, abre uma nova página na mesma aba em que estiver aberto.
+            target="_blank" -> Abre uma nova página em outra aba.
+         -->
+
+        <!-- Usado para criar links de redicionamento para um número de telefone -->
         <a href="tel:+55999999999"> Número de telefone</a>
+
+        <!-- Usado para criar links de redicionamento para um email -->
+        <a href="mailto:suporte@exemplo.com">Enviar email</a>
+
+        <!-- Enviando o usuário para um elemento da página (div id) -->
+        <a href="#div1"> Ir para o elemento-da-pagina </a>
+
+        <!-- tag usada para exibir uma imagem na página -->
+        <img src="img/cat-1.jpg" 
+        alt="Img de um gato direto do projeto"
+        title="Cat from Project"
+        width="20%">
+
+        <img src="https://cdn.pixabay.com/photo/2016/04/23/05/58/cat-1347176_960_720.jpg" 
+        alt="Img de um gato direto da internet"
+        title="Cat from internet"
+        width="30%">
+        <!-- 
+            src="" -> Fonte da imagem.
+            alt="texto-aqui" -> aparece um texto quando a imagen não é carregada.
+            tittle="" -> tooltip ao passar o mouse sobre a imagem.
+         -->
+
+         <!-- Tag iframe é utilizada para incorporar um conteúdo de uma página externa ao site -->
+         <iframe
+            src="https://www.accuweather.com/pt/br/palmeira-doeste/2307791/weather-forecast/2307791"
+            width="600px"
+            height="450px"
+         > </iframe>
+
     </div>
 
+    <div class="div2" id="2">
+
+        <!-- 
+            Propriedades de Margin aplicados aos parágrafos abaixo.
+            Explicação no arquivo estilo.css
+        -->
+        <p>Primeiro paragrafo para testar margem</p>
+        <p>Segundo paragrafo para testar margem</p>
+    </div>
 
 </body>
