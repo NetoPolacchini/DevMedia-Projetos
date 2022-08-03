@@ -12,7 +12,9 @@ html {
 }
 
 .div1 a, iframe,h1,h2,h3,h4,h5,h6  {
-    /* Display block é usado para manter os elementos um abaixo do outro */
+    /* 
+        Display block é usado para manter os elementos um abaixo do outro
+    */
     display: block;
     margin: 0px;
 }
@@ -25,25 +27,27 @@ html {
     /* Tamanho da fonte */
     font-size: 15px;
 
-    /* Expessura da fonte 
-        font-weight: normal; -> Fonte normal
-        font-weight: bold; -> Fonte mais grossa
+    /* 
+        Expessura da fonte.
+        font-weight: normal; -> Fonte normal.
+        font-weight: bold; -> Fonte mais grossa.
     */
     font-weight: bold;
     
 
-    /* Aplicando linhas em texto
-    text-decoration: underline; -> Linha em baixo do texto
-    text-decoration: overline; -> Linha por cima do texto
-    text-decoration: none; -> Retira as linhas
+    /* 
+    Aplicando linhas em texto.
+    text-decoration: underline; -> Linha em baixo do texto.
+    text-decoration: overline; -> Linha por cima do texto.
+    text-decoration: none; -> Retira as linhas.
     */
     text-decoration: underline;
     
 
     /* Alinhando textos 
-        text-align: left;           -> Alinha os textos para a esquerda
-        text-align: center;         -> Alinha os textos para o centro
-        text-align: right;          -> Alinha os textos para a direita
+        text-align: left;           -> Alinha os textos para a esquerda.
+        text-align: center;         -> Alinha os textos para o centro.
+        text-align: right;          -> Alinha os textos para a direita.
         text-align: justify;        -> Os conteúdos inline são justificados. 
                                      Text should be spaced to line up its left 
                                      and right edges to the left and right edges of 
@@ -97,17 +101,17 @@ html {
 .div2 p{
     /* Margin
     margin: 10px; -> Essa margem representa a distância para todos os lados do elemento.
-    margin-top: 10px; -> Margem para a parte superiror
-    margin-right: 10px; ->  Margem para a esquerda
-    margin-bottom: 10px -> Margem para a base
-    margin-left: 10px; -> Margem para a esquerda
-    margin: 10px 20px; -> Margem para, respectivamente, 10px para topo e base, 20px para os lados
-    margin: 10px 20px 30px 40px; -> Margem para, respectivamente, topo, direita, base e esquerda
+    margin-top: 10px; -> Margem para a parte superiror.
+    margin-right: 10px; ->  Margem para a esquerda.
+    margin-bottom: 10px -> Margem para a base.
+    margin-left: 10px; -> Margem para a esquerda.
+    margin: 10px 20px; -> Margem para, respectivamente, 10px para topo e base, 20px para os lados.
+    margin: 10px 20px 30px 40px; -> Margem para, respectivamente, topo, direita, base e esquerda.
 
     Uma maneira de centralizar um elemento usando margin é:
     margin: 10px auto; -> Isso faz com que as margens dos lados tenham o mesmo tamanho calculado automaticamente.
 
-    Utilizando o valor 0 na margin, a margem do objeto é removida
+    Utilizando o valor 0 na margin, a margem do objeto é removida.
 
     */
     margin: 0px;
@@ -125,5 +129,105 @@ html {
     */
 }
 
+/*************************************************************************************************************/
 
+.div3 {}
+
+.div3 .imagem-fundo{
+    /*
+        Para preencher o fundo de um elemento com uma imagem:
+    */
+    background-image: url(img/cat-1.jpg);
+
+    /*
+        Ao utilizar o background-image a imagem de fundo vai se repetir para preencher o fundo.
+        Para impedir, basta usar o background-repeat com o valor no-repeat;
+    */
+    background-repeat: no-repeat;
+
+    /*
+        background-repeat: repeat-x     -> Repete a imagem horizontalmente.
+        background-repeat: repeat-y     -> Repete a imagem verticalmente.
+
+        Ao utilizar a propriedade background-repeat para não repetir a imagem ou então
+        para repetir apenas em uma direção, podemos preencher o espaço que a imagem não 
+        ocupa utilizando background-color.
+    */
+
+    /*
+        Depois de inserir a imagem de fundo, podemos alterar sua posição utilizando background-position.
+
+        background-position: center;        -> Centralizando a imagem de fundo.
+        background-position: right;         -> Posicionando a imagem de fundo à direita.
+        background-position: left;          -> Posicionando a imagem de fundo à esquerda.
+        background-position: top;           -> Posicionando a imagem de fundo na parte superior do elemento.
+        background-position: bottom;        -> Posicionando a imagem de fundo na parte inferior do elemento.
+
+    */
+
+    /* 
+        Ajustando o tamanho da imagem de fundo.
+
+        background-size: cover;     -> Imagem ocupa todo o espaço do elemento. 
+                                       Apenas parte da imagem é exibida.
+        background-size: contain;   -> Estica a imagem até que ela caiba no elemento sem perder sua proporção.
+        
+        Podemos utilizar dois valores e definir o tamanho do elemento que a imagem vai ocupar.
+        O primeiro valor define a largura e o segundo a altura.
+        background-size: 50% 70%;
+
+        Para deixar a imagem estática, utilizamos a propriedade background-attachment.
+        background-attachment: fixed;
+    */
+
+    /*
+        Podemos escrever as propriedades do background de maneira reduzida.
+
+        Basta usar a propriedade background e inserir os valores que deseja utilizar
+        não importando a ordem.
+        
+        background: top right no-repeat #of0 fixed url(img/caminho-da-imagem.jpg);
+
+        Também não há a necessidade de utilizar todos os valores.
+    */
+
+}
+
+/*************************************************************************************************************/
+
+/* 
+    Valor relativo é aquele que define o valor com base em um outro elemento.
+
+    vw é uma medida de valor relativo que se refere a largura da tela
+    cada 1vw corresponde a 1% da largura da tela.
+    O vw conta o espaço que fica por baixo da barra de rolagem como parte da tela.
+
+    O vh funciona da mesma maneira que op vw, porém o vh faz referência a altura da tela.
+*/
+
+/* 
+    Introdução ao calc
+
+    Em alguns casos, queremos que a imagem ocupe toda a largura da tela.
+    Porém, se precisarmos adicionar à imagem uma borda, margem ou padding isso irá quebrar a página.
+
+    img {
+        width: 100vw;
+        margin: 30px;
+    }
+
+    A imagem continua tendo 100vw, mas a margem a afasta 
+    30px de cada um dos lados dela, colocando-a fora da tela.
+
+    Para impedir que isso aconteça, podemos utilizar o calc:
+
+    img {
+        width: calc(100vw - 60px);
+        margin: 30px;
+    }
+
+    Através desse calc, tiramos 60px de largura da imagem (30px da direita, 30px da esquerda)
+    fazendo com que a imagem ocupe 100vw.
+
+*/
 
