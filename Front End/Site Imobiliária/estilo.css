@@ -1,46 +1,72 @@
 html, body{
     margin:0px !important;
     padding: 0px !important;
- }
+}
 
- body {
+/* Configs Globais */
+body {
     font-family: 'Tahoma';
- }
+}
 
- p {
+p {
     margin: 10px auto 10px auto;
     width: 980px;
     text-align: justify;
     font-size: 18px;
     line-height: 28px;
- }
+}
 
- .cabecario, .banner, .sobre, .servicos, .corretores, .contato{
+h3 {
+   color: #1c81c0;
+   margin-top: 0px;
+   font-weight: normal;
+}
+
+span {
+   font-weight: bold; 
+}
+
+div {
     padding-top: 30px;
     text-align: center;
     padding-bottom: 30px;
- }
+}
 
- .cabecario {
+/* Configs Específicas */
+
+.cabecario {
     background-color: #afddfb;
- }
+}
 
- .cabecario img {
+.cabecario img {
     width: 150px;
- }
+}
 
- .cabecario p {
+.cabecario p {
     margin-top: 15px;
     margin-bottom: 25px;
     text-align: center;
- }
+}
 
- .cabecario a {
+.cabecario a {
     font-size: 18px;
     color: #1d1d1d;
     border-bottom: solid 2px #1d1d1d;
     text-decoration: none;
     margin: 0px 10px;
- }
+}
 
+.sobre h2 {
+   color: #1d1d1d;
+   margin-bottom: 5px;
+}
+
+.sobre img {
+   width: 450px;
+}
+
+.texto-azul{
+   color: #1d80c1;
+   font-weight: bold;
+}
 
