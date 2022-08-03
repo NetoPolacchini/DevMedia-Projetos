@@ -41,9 +41,17 @@ html {
     
 
     /* Alinhando textos 
-        text-align:left; -> Alinha os textos para a esquerda
-        text-align:center; -> Alinha os textos para o centro
-        text-align:right; -> Alinha os textos para a direita
+        text-align: left;           -> Alinha os textos para a esquerda
+        text-align: center;         -> Alinha os textos para o centro
+        text-align: right;          -> Alinha os textos para a direita
+        text-align: justify;        -> Os conteúdos inline são justificados. 
+                                     Text should be spaced to line up its left 
+                                     and right edges to the left and right edges of 
+                                     the line box, except for the last line.
+        text-align: justify-all;    -> Semelhante a justify, porém força a última linha a ser justificada.
+        text-align: start;          -> Igual left se a direção é esquerda-para-direita e right se a direção é direita-para-esquerda.
+        text-align: end;            ->Igual right se a direção é esquerda-para-direita e left se a direção é direita-para-esquerda.
+        text-align: match-parent;   ->Similar to inherit, but the values start and end are calculated according the parent's direction (en-US) and are replaced by the adequate left or right value.    
     */
     text-align: center;
 
