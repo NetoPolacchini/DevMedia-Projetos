@@ -3,6 +3,44 @@ html, body{
     padding: 0px !important;
  }
 
-.cabecario {
-    background-color: #B0DDFC;
-}
+ body {
+    font-family: 'Tahoma';
+ }
+
+ p {
+    margin: 10px auto 10px auto;
+    width: 980px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px;
+ }
+
+ .cabecario, .banner, .sobre, .servicos, .corretores, .contato{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+ }
+
+ .cabecario {
+    background-color: #afddfb;
+ }
+
+ .cabecario img {
+    width: 150px;
+ }
+
+ .cabecario p {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+ }
+
+ .cabecario a {
+    font-size: 18px;
+    color: #1d1d1d;
+    border-bottom: solid 2px #1d1d1d;
+    text-decoration: none;
+    margin: 0px 10px;
+ }
+
+
