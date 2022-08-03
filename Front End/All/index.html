@@ -107,6 +107,111 @@
         -->
         <p>Primeiro paragrafo para testar margem</p>
         <p>Segundo paragrafo para testar margem</p>
+
+        <!-- 
+            Uma lista ordenada se inicia e se encerra respectivamente através das tags <ol> e </ol>
+            Um item da lista se inicia e se encerra respectivamente através das tags <li> e </li>
+            Dentro de um item podemos utilizar qualquer elemento HTML que quisermos como títulos, parágrafos, 
+            imagens e até mesmo outras listas (chamamos de aninhamento).
+        -->
+
+        <h3>Primeira Lista Ordenada</h3>
+        <!-- Abertura da lista ordenada -->
+        <ol>
+            <!-- Abertura de um item -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <!-- 
+            Para alterarmos o tipo de marcação, devemos usar o atributo type:
+            <ol type="1"> -> ordenação numérica (padrão)
+            <ol type="a"> -> ordenação alfabética minúscula
+            <ol type="A"> -> ordenação alfabética maiúscula
+            <ol type="i"> -> ordenação romanos minúsculos
+            <ol type="I"> -> ordenação romanos maiúsculos
+        -->
+
+        <h3>Segunda Lista Ordenada - Start="7"</h3>
+        <!-- 
+            Ponto de partida (start)
+            Podemos definir um ponto de partida para a classificação dos itens, dessa forma a 
+            numeração começará a partir de um número especificado no atributo start.
+         -->
+        <ol start="7">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        
+        <h3>Terceira Lista Ordenada - reversed</h3>
+        <!-- 
+            Invertendo a Ordem (reversed).
+            Através do atributo reversed informamos que o comportamento da nossa lista será de maneira 
+            reversa.
+        -->
+        <ol reversed>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <h3>Primeira Lista Não Ordenada</h3>
+        <!-- 
+            Uma lista não ordenada se inicia e se encerra respectivamente através das tags <ul> e </ul>.
+            Um item da lista se inicia e se encerra respectivamente através das tags <li> e </li>.
+        -->
+        
+        <!-- Abertura da Lista -->
+        <ul>
+            <!-- Abertura do Item -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- 
+            Atributo de Marcação (type)
+
+            A principal diferença entre a lista não ordenada e a lista ordenada está 
+            na maneira com que os itens de cada lista são apresentados.
+
+            A lista não ordenada coloca marcadores antes de cada elemento, enquanto
+            a lista ordenada enumera os itens.
+
+            Nas listas não ordenadas também podemos alterar seu marcador padrão,
+            que inicialmente é setado como disc (círculos pretos).
+
+            <ul type="disc"> -> marcação através de círculos (bolinha cheia)
+            <ul type="square"> -> marcação através de quadrados 
+            <ul type="circle"> -> marcação através de circuferências (bolinha vazia)  
+            <ul type="none"> -> remove a marcação da lista
+        -->
+
+        <h3>Primeira Lista de Definição</h3>
+        <!--
+            Lista de Definição
+
+            A estrutura de uma lista de definição é composta pelas seguintes tags:
+
+            <dl> </dl> -> abertura e fechamento de uma lista;
+            <dt> </dt> -> abertura e fechamento de um termo;
+            <dd> </dd> -> abertura e fechamento de uma descrição.
+
+        -->
+
+        <dl>
+            <dt>Item/Termo 1 a ser descrito</dt>
+            <dd>Descrição do termo 1</dd>
+
+            <dt><br>Item/Termo 2 a ser descrito</dt>
+            <dd>Descrição do termo 2</dd>
+
+            <dt><br>Item/Termo 3 a ser descrito</dt>
+            <dd>Descrição do termo 3</dd>
+        </dl>
+
     </div>
 
 </body>
