@@ -77,7 +77,7 @@ div {
    margin-bottom: 5px;
 }
 
-.sobre img {
+.sobre img, .corretores img {
    width: 450px;
 }
 
@@ -104,3 +104,10 @@ div {
    text-align: left;
    font-size: 22px;
 }
+
+.corretores h2 {
+   color: #1c81c0;
+   margin-top: 0px;
+}
+
+
