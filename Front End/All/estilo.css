@@ -13,7 +13,22 @@ html {
 
 .div1 a, iframe,h1,h2,h3,h4,h5,h6  {
     /* 
-        Display block é usado para manter os elementos um abaixo do outro
+        display: block; -> faz com que os elementos sejam criados um abaixo do outro.
+        Elementos block padrão:
+        div
+        parágrafos (p)
+        títulos (h1 - h6)
+
+        display: inline; -> faz com que os elementos sejam criados um do lado do outro, ocupando
+        apenas a largura/espaço necessário.
+        Elementos inline por padrão:
+        span
+        link (a)
+        imagem (img)
+
+        display: none; -> O elemento continua existindo, mas não é exibido para o usuário no navegador.
+                          O espaço do elemento não é ocupado.
+
     */
     display: block;
     margin: 0px;
@@ -271,4 +286,19 @@ html {
     Para resolver isso, garanta que o tamanho do elemento comporte o conteúdo dentro do limite, para que
     a barra de rolagem não seja exibida.
 
+    As propriedades do overflow podem ser simplificadas:
+    overflow: auto scroll;  -> Referem au overflow-x e overflow-y.
+*/
+
+/* 
+    Visibility
+
+    visibility é uma propriedade do CSS que controla a visibildiade de um elemento na tela.
+    Possui duas propriedades mais usadas: visible e hidden.
+
+    visible indica que o elemento está visível, esse é o valor padrão de todo elemento.
+    hidden, por sua vês, deixa o elemento invisível na tela. Não ocupa o espaço do elemento.
+
+    Apesar da semelhança com o display: none, visibility não remove o espaço do elemento da tela,
+    não apenas o deixa invisível.
 */
