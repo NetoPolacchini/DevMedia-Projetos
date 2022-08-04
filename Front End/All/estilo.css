@@ -302,3 +302,70 @@ html {
     Apesar da semelhança com o display: none, visibility não remove o espaço do elemento da tela,
     não apenas o deixa invisível.
 */
+
+/*
+    Opacity
+
+    A propriedade opacity define a opacidade de um elemento HTML, ou seja, seu nível de trasnparência.
+
+    Sintaxe - 
+    opacity: 50%;
+
+    A propriedade aceita valores entre 0 a 100%. Quanto menor esse valor, mais transparente o elemento
+    se torna.
+
+    Por padrão, a opacidade do elemento é 100%.
+*/
+
+/*
+    Box-Sizing
+
+    É uma propriedade do CSS que altera a forma como o tamanho de um elemento é calculado.
+    Por padrão, o tamanho de um elemento leva em conta sua altura, largura, padding e border.
+
+    Repare que mesmo tendo definido a largura como 350px o elemento cresceu e ficou com 390px de largura.
+
+    div{
+        width: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    Largura total: 350px(width) + 20px(padding-left) + 20px(padding-right) = 390px.
+
+    Para impedir que o elemento cresça, utilizamos o box-sizing:border-box, com isso, 
+    o padding será incluido na largura total.
+
+    div{
+        width: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    Internamente o CSS vai subtrair o padding do width.
+    Largura total: 310px + 20px + 20px = 350px.
+
+    O mesmo vale para a altura, um elemento com 200px de altura e 10px de 
+    padding em cada ponta ficaria assim:
+
+    div{
+        height: 200px;
+        padding-top:10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    Altura total: 180px + 10px + 10px = 200px.
+
+    Com box-sizing: border-box, as medidas do elemento passam a ser respeitadas 
+    e os valores de padding e border passam a ser incluídos no valor da largura.
+
+    Sintaxe
+
+    box-sizing é uma propriedade do CSS e sua sintaxe é semelhante a outras propriedades, com
+    nome e valor
+
+    box-sizing: border-box;     -> Respeita as medidas do elemento.
+    box-sizing: content-box;    -> Esse é o valor padrão de todo elemento.
+*/
