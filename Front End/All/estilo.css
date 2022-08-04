@@ -131,7 +131,6 @@ html {
 
 /*************************************************************************************************************/
 
-.div3 {}
 
 .div3 .imagem-fundo{
     /*
@@ -231,3 +230,45 @@ html {
 
 */
 
+/* 
+    Altura/Largura Máxima/Mínima de um elemento.
+
+    min-height define a altura mínima que um elemento pode ter.
+    max-height define a altura máxima que um elemento pode ter.
+
+    min-width define a largura mínima que um elemento pode ter.
+    max-width define a largura máxima que um elemento pode ter.
+*/
+
+/* 
+    Overflow
+
+    Imagine que você quer colocar um texto em uma área de tamanho fixo em uma página.
+    Porém, esse texto é muito grande e acaba ultrapassando o tamanho da área
+    Isso pode ser resolvido através do uso do overflow.
+
+    O overflow garante que o conteúdo respeite as dimensões do elemento.
+    Ele faz isso criando uma barra de rolagem que permite a leitura do texto sem ultrapassar o tamanho.
+
+    Para utilizar ele, deve utilizar a propriedade overflow no elemento que queremos que tenha o tamanho
+    respeitado.
+
+    overflow: scroll;       -> Exibe uma barra de rolagem no elemento para garantir que o conteúdo
+                               interno não ultrapasse o tamanho definido no CSS.
+                               Uma barra de rolagem será exibida até mesmo quando o tamanho limite
+                               não for ultrapassado. Exibe barra de rolagem vertical e horizontal.
+
+    overflow: auto;         -> Exibe uma barra de rolagem apenas se o conteúdo ultrapassar o tamanho
+                               limite do elemento.
+
+    Para que o overflow afete apenas uma barra em específico, utilizamos as propriedades:
+    overflow-x      -> Controla o scroll horizontal adicionando uma barra de rolagem horizontal.
+    overflow-y      -> Controla o scroll vertical adicionando uma barra de rolagem vertical.
+
+    Quando uma das propriedades acima é utilizada, a outra é automaticamente definida com o atributo auto.
+    Isso faz com que, caso eu use o overflow-x, o valor da propriedade overflow-y será definido
+    automaticamente com o valor auto, mesmo eu não declarando ela.
+    Para resolver isso, garanta que o tamanho do elemento comporte o conteúdo dentro do limite, para que
+    a barra de rolagem não seja exibida.
+
+*/
