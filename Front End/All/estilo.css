@@ -369,3 +369,76 @@ html {
     box-sizing: border-box;     -> Respeita as medidas do elemento.
     box-sizing: content-box;    -> Esse é o valor padrão de todo elemento.
 */
+
+/*
+    Box-shadow
+
+    O box-shadow é uma propriedade do CSS que permite adicionar sombra em volta dos elementos.
+    Pode ser aplicada em qualquer elemento HTML.
+
+    Para o box-shadow funcionar, ele precisa receber os valores de deslocamento-x e deslocamento-y
+
+    img{
+        width: 250px;
+        height: 250px;
+        box-shadow: 20px 0;
+    }
+
+    Deslocamento é o valor que define a posição em que a sombra vai aparecer.
+    O valor padrão dos eixos x e y é 0, o que significa que a sombra está atrás do elemento.
+
+    Quando deslocamos a sombra, sua posição é ajustada a partir da posição do elemento.
+
+    No eixo x, um valor positivo move a sombra para a direita.
+    Já um valor negativo no eixo x move a sombra para a esquerda.
+
+    No eixo y um valor positivo move a sombra para baixo.
+    Já um valor negativo no eixo
+
+    Box-shadow Desfoque
+
+    É possível aplicar um efeito de desfoque à sombra adicionando um terceiro valor ao box-shadow
+    Quanto maior o valor, maior o desfoque
+
+    box-shadow: 20px 20px 10px;
+
+    O valor 0 tem o mesmo efeito de não informar o desfoque
+    O uso do valor desfoque é opcional
+
+    Box-shadow Expansão
+
+    Por padrão, a sombra tem o mesmo tamanho do elemento
+
+    É possível expandir a sombra para todas as direções adicionando
+    um quarto valor ao box-shadow.
+    O uso do valor de expansão é opcional, porém, se for utilizá-lo é necessário informar
+    o desfoque, ainda que com valor zerado.
+
+    box-shadow: 0 0 0 30px;
+
+    Box-shadow Cor
+
+    Por padrão, a sombra tem a cor preta (#000000)
+    É possível alterar a cor da sombra preenchendo um quinto valor
+    com a cor desejada.
+    A cor pode ser preenchida nos formatos nominal, RGB ou Hexadecimal.
+
+    box-shadow: 20px 0 0 0 blue;
+
+    Box-shadow Inset
+
+    Por padrão, o box-shadow cria uma sombra com o tamanho do elemento atrás dele.
+    O valor inset modifica isso, criando a sombra na frente do elemento com a expansão informada.
+
+    Se expandirmos uma sombra inset em 20px ela contará esse tamanho a partir das bordas do elemento
+
+    box-shadow: 0 0 0 20px black inset;
+
+    O valor inset funciona com divs, spans e outros elementos, mas não com imagens.
+    O valor inset pode ser colocado no início ou no final do box-shadow.
+
+    box-shadow: inset 20px 20px 0 0 blue;
+    box-shadow: blue 20px 20px 0 0 inset;
+    
+    
+*/
