@@ -26,6 +26,9 @@ html {
         link (a)
         imagem (img)
 
+        display: flex; ->Torna o elemento um flex container automaticamente transformando 
+        todos os seus filhos diretos em flex itens.
+
         display: none; -> O elemento continua existindo, mas não é exibido para o usuário no navegador.
                           O espaço do elemento não é ocupado.
 
