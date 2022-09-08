@@ -55,7 +55,7 @@ html {
 
     /* 
     Aplicando linhas em texto.
-    text-decoration: underline; -> Linha em baixo do texto.
+    text-decoration: underline; -> Linha em baixo do texto (sublinhado).
     text-decoration: overline; -> Linha por cima do texto.
     text-decoration: none; -> Retira as linhas.
     */
@@ -115,12 +115,21 @@ html {
         Terceiro valor é a cor da borda
     */
 
+    /* 
+        border-top:;
+        border-bottom: 
+        border-left: 
+        border-right: 
+        
+        border: none;
+    */
+
 }
 .div2 p{
     /* Margin
     margin: 10px; -> Essa margem representa a distância para todos os lados do elemento.
-    margin-top: 10px; -> Margem para a parte superiror.
-    margin-right: 10px; ->  Margem para a esquerda.
+    margin-top: 10px; -> Margem para a parte superior.
+    margin-right: 10px; ->  Margem para a direita.
     margin-bottom: 10px -> Margem para a base.
     margin-left: 10px; -> Margem para a esquerda.
     margin: 10px 20px; -> Margem para, respectivamente, 10px para topo e base, 20px para os lados.
@@ -300,7 +309,7 @@ html {
     Possui duas propriedades mais usadas: visible e hidden.
 
     visible indica que o elemento está visível, esse é o valor padrão de todo elemento.
-    hidden, por sua vês, deixa o elemento invisível na tela. Não ocupa o espaço do elemento.
+    hidden, por sua vês, deixa o elemento invisível na tela.
 
     Apesar da semelhança com o display: none, visibility não remove o espaço do elemento da tela,
     não apenas o deixa invisível.
@@ -442,8 +451,240 @@ html {
 
     box-shadow: inset 20px 20px 0 0 blue;
     box-shadow: blue 20px 20px 0 0 inset;
+*/
 
-    
-    
-    
+/*
+    Para fixar um elemento na página usamos a propriedade position com o valor fixed.
+    Veja abaixo um exemplo de como é a declaração desta propriedade.
+    Acompanha o movimento do scroll.
+
+    div1{
+        position: fixed;
+        border: 2px red;
+    }
+
+    div2{
+        border:2px;
+    }
+
+    Isso fará com que a div1, a primeiro momento, apareça em cima da div2. (pois ainda ela 
+    não foi realocada para outro espaço, alem do default). Assim que descer com o scroll,
+    verá que a div1 acompanha junto e se mantém sempre no mesmo lugar relativo posição do scroll.
+
+    Para mover a div fixada, é necessário usar as propriedades top, bottom, left e right
+    Essas propriedades aceitam qualquer dimensão.
+
+    top -> move o elemento na vertical, de cima para baixo.
+    bottom -> move o elemento na vertical, de baixo para cima.
+    left -> move o elemento na horizontal, da esquerda para a direita.
+    right -> move o elemento na horizontal, da direita para a esquerda.
+
+    Essas propriedades foram criadas para serem usadas em conjuntos com a propriedade
+    position. Sem essa propriedade elas não funcionam.
+
+    exemplo:
+
+    div1{
+        position: fixed;
+        border: 2px red;
+        right: 10px;
+    }
+
+    A propriedade right posicionou o elemento na parte direita da página. Como demos 
+    o valor 10 para right, a div1 ficou a 10px da borda direita
+    Dessa maneira, funcionam as propriedades top, left and bottom.
+
+    Na prática, as propriedades top e bottom não são utilizadas juntos, assim como
+    as propriedades left e right.
+*/
+
+/*
+    Para mover um elemento livremente na página usamos a propriedade position com o valor absolute
+    Usando position: absolute; juntamente com as propriedades top, bottom, left e right,
+    podemos mover um elemento livremente pela página.
+
+    div1{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
+    O atributo absolute move o objeto livremente em relação a página.
+    Logo, caso mais elementos sejam colocados na página, é possível que isso quebre a posição
+    ideal que os elementos estavam originalmente.
+
+    Para resolver isso, basta usar o position: relative;
+
+    Isso faz com que sua posição seja definida a partir do elemento pai.
+*/
+
+/*
+    Display FlexBox
+    O primeiro passo para utilizar o Flexbox é definir a propriedade display do container com o valor flex. 
+    Isso é necessário para que as demais propriedades apresentem o resultado esperado.
+
+    A sintaxe de uso dessa propriedade é a seguinte:
+
+    .container {
+        display: flex;
+    }
+
+    flex-direction
+    A propriedade flex-direction deve ser aplicada ao container e define o eixo/fluxo de exibição 
+    em que os elementos serão organizados.
+    A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:
+
+    .container {
+        display: flex;
+        flex-direction: [row / row-reverse / column / column-reverse];
+    }
+
+    row (padrão): Os itens são organizados em forma de linha da esquerda para a direita;
+    row-reverse: Os itens são organizados em forma exibição em linha da direita para a esquerda;
+    column: Os itens são organizados em forma de colunas iniciando de cima para baixo;
+    column-reverse: Os itens são organizados em forma de colunas iniciando de baixo para cima.
+
+    flex-wrap
+    Por padrão os itens do container tentarão se ajustar em uma única linha dentro do container, 
+    mas para isso a sua largura original pode ser ajustada para que todos caibam na largura do elemento pai.
+    Com a propriedade flex-wrap aplicada ao container podemos alterar esse comportamento, fazendo com que 
+    ocorra a “quebra de linha” nos itens.
+
+    .container {
+        display: flex;
+        flex-wrap: [nowrap / wrap / wrap-reverse];
+    }
+
+    nowrap (padrão): Todos os itens serão dispostos em uma linha;
+    wrap: Ocorrerá a quebra de linha e os itens mais à direita serão deslocados para a linha de baixo;
+    wrap-reverse: Ocorrerá a quebra de linha e os itens mais à direita serão deslocados para a linha de cima;
+
+    flex-flow
+    Esta propriedade é uma forma abreviada para a escrita das propriedades flex-direction 
+    e flex-wrap, nesta ordem. 
+    Portanto, ela se aplica ao container.
+
+    Normalmente essas propriedades são definidas uma a uma, da seguinte forma:
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    Já com o flex-flow podemos escrever as duas de forma simplificada:
+
+    flex-flow: column wrap;
+
+    justify-content
+    A propriedade justify-content define o alinhamento dos itens ao longo do eixo principal do container. 
+    A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:
+
+    .container {
+        display: flex;
+        justify-content: [flex-start/flex-end/center/space-between/space-around];
+    }
+
+    flex-start (padrão): Os itens são alinhados a partir do início do eixo principal;
+    flex-end: Os itens são alinhados a partir do fim do eixo principal;
+    center: Os itens são alinhados ao centro do eixo principal;
+    space-between: O primeiro item é deslocado para o início do eixo principal, o último é deslocado para
+    o final do eixo principal e os demais são distribuídos uniformemente entre eles;
+    space-around: Os itens são uniformemente distribuídos ao longo do eixo principal. Aqui, porém,
+    são atribuídas margens iguais à esquerda e à direita (ou acima e abaixo, 
+    dependendo da direção do eixo principal).
+
+    Por isso o primeiro e o último item não ficam “colados” nas bordas do container.
+
+    align-content
+    Essa propriedade define como as linhas são distribuídas ao longo do eixo transversal do container.
+    Ela só terá efeito se o elemento tiver mais de uma linha, ou seja, se ele tiver elementos suficientes
+    para quebrar a linha e a propriedade flex-wrap:wrap tiver sido definida.
+    A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:
+
+    .container {
+        display: flex;
+        align-content: [stretch/flex-start/flex-end/center/space-between/space-around];
+    }
+
+    stretch (padrão): As linhas são distribuídas uniformemente ao longo do eixo transversal,
+    ocupando todo o espaço disponível;
+    flex-start: As linhas são distribuídas a partir do início do eixo transversal;
+    flex-end: As linhas são distribuídas a partir do fim do eixo transversal;
+    center: As linhas são mantidas no centro do eixo transversal;
+    space-between: A primeira linha é deslocada para o início do eixo transversal, a última
+    é deslocada para o final do eixo transversal e as
+    demais são distribuídas uniformemente entre eles;
+
+    space-around: As linhas são uniformemente distribuídas ao longo do eixo transversal.
+    Aqui, porém, são atribuídas margens iguais à esquerda e à direita (ou acima e abaixo,
+    dependendo da direção do eixo transversal).
+    Por isso a primeira e a última linha não ficam “coladas” nas bordas do container.
+
+    align-items
+    Essa propriedade define como os itens são distribuídos ao longo do eixo transversal do container.
+    A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:
+
+    .container {
+        display: flex;
+        align-items: [stretch/flex-start/flex-end/center/baseline];
+    }
+
+    stretch (padrão): Os itens serão esticados para preencher
+    toda a dimensão do eixo transversal (altura ou largura);
+    flex-start: Os itens são deslocadas para o início do eixo transversal;
+    flex-end: Os itens são deslocadas para o final do eixo transversal;
+    center: Os itens são centralizados no eixo transversal;
+    baseline: Os itens são alinhados a partir da base da primeira linha de texto de cada um.
+
+    Order
+    Por padrão, os itens são distribuídos no container na ordem em que são inseridos no HTML.
+    No entanto, essa ordem pode ser alterada por meio da propriedade order, cuja sintaxe vemos abaixo:
+
+    .item2 {
+        order: [número];
+    }
+
+    O valor numérico atribuído a essa propriedade define a ordem do item. Por exemplo, o valor 2 faz
+    com que o item seja o segundo item ao longo do eixo principal,
+    enquanto o valor -1 faz com que ele apareça antes do primeiro.
+
+    flex-grow
+    Esta propriedade define a proporção com que um item deve crescer caso seja necessário.
+    Por padrão seu valor é 0, o que indica que o item não deve crescer,
+    e são aceitos apenas valores numéricos positivos.
+
+    A sintaxe dessa propriedade é a seguinte:
+
+    .item2 {
+        flex-grow: [número];
+    }
+
+    flex-shrink
+    Esta propriedade define a proporção com que um item deve encolher caso seja necessário.
+    Essa propriedade aceita apenas valores positivos, e seu valor padrão é 1.
+
+    A sintaxe dessa propriedade é a seguinte:
+
+    .item2 {
+        flex-shrink: [número];
+    }
+
+    flex-basis
+    O flex-basis define o tamanho inicial que um item deve ter antes que o espaço ao seu
+    redor seja distribuído. Ou seja, dependendo da direção do eixo principal (horizontal ou vertical),
+    essa propriedade define a largura
+    ou altura mínima do elemento antes que ele seja redimensionado por outras propriedades.
+
+    A sintaxe dessa propriedade é a seguinte:
+
+    .item2 {
+        flex-basis: [número];
+    }
+
+    O valor atribuído a essa propriedade pode ser em percentual, em pixels, ou a palavra auto, que é o
+    valor padrão (considera as dimensões do item - width e height).
+
+
+
 */
