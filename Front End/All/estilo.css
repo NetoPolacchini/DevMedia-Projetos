@@ -711,8 +711,22 @@ html {
     flex-end: O item é deslocado para o final do eixo transversal;
     center: O item é centralizado no eixo transversal;
     baseline: O item é alinhado a partir da base da primeira linha de texto dos demais.
+*/
 
+/*
+    Estrutura básica de uma Tabela
 
+    <table> --> Cria a tabela
+    <tr> --> Cria uma linha na tabela
+    <td> --> Cria uma coluna de conteúdo
+    <th> --> Cria uma coluna do cabeçalho
+
+    <thead> --> Define a área do cabeçalho com as colunas.
+    <tbody> --> Define a área que contém o conteúdo da coluna
+    <tfoot> --> Define área do rodapé que etá exibindo o 
+    gênero e o país das bandas listadas
     
 
-*/
+    Para uma melhor organização, é importante que a estrutura da tabela sejam sempre nessa ordem
+
+*/ 
