@@ -30,7 +30,7 @@
     -->
 
     <!-- Adicionando uma folha de estilos a página -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <!--
         rel="stylesheet" -> O atributo informa que estamos carregando um arquivo de estilos
         href="estilo.css" -> determina o caminho do arquivo a ser carregado
@@ -38,6 +38,15 @@
 
 </head>
 <body>
+
+    <header>
+        <nav class="topo-links">
+            <a href="#1"> Div 1</a>
+            <a href="#2"> Div 2</a>
+            <a href="#3"> Div 3</a>
+        </nav>
+    </header>
+
     <div class="div1" id="1">
 
         <!-- Tag usada para títulos -->
@@ -220,14 +229,14 @@
             <caption>Título da tabela</caption>
             <thead> <!-- Define a área do cabeçalho com as colunas. -->
                 <tr> <!-- A tag <tr> cria uma linha na tabela -->
-                    <td>Jogo</td> <!-- A tag <td> cria uma coluna na tabela -->
-                    <td>Ano</td>
+                    <th>Jogo</th> <!-- A tag <th> cria uma coluna do cabeçalho -->
+                    <th>Ano</th>
                 </tr>
             </thead>
 
             <tbody> <!-- Define a área que contém o conteúdo da coluna -->
                 <tr>
-                    <td>Quantum Break</td>
+                    <td>Quantum Break</td> <!-- <td> Cria uma coluna de conteúdo -->
                     <td>2016</td>
                 </tr>
             </tbody>
@@ -245,8 +254,8 @@
 
 
     <div class="div3" id="3">
-        <div class="imagem-fundo">
-            <p> Ola</p>
+        <div >
+            <p> Estou aqui sem nada</p>
         </div>
 
         <div>

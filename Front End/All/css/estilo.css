@@ -1,8 +1,17 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 html {
-    background-color: blue;
     margin: 0px;
     padding: 0px;
+}
 
+header nav {
+    background-color: black;
+    color: yellow;
+    text-decoration: none;
 }
 
 .div1  {
@@ -728,5 +737,71 @@ html {
     
 
     Para uma melhor organização, é importante que a estrutura da tabela sejam sempre nessa ordem
-
 */ 
+/*
+    Criar formulário.
+
+    <form></form> --> Abre e fecha a tag formulário.
+    <input type="text" name="nome" /> -->   Repare que é uma tag única.
+                                            Cria um campo curto para o usuário.
+    <button type="submit"> Enviar Formulário </button> --> Botao para enviar formulario.
+
+    Tipos de input
+
+    <input type="text" name="nome"> --> O type text serve para a digitação de textos;
+    <input type="password" name="senha"> --> O type password serve para a digitação de senhas;
+    <input type="date" name="data_nascimento"> --> O type date serve para a digitação de datas;
+    <input type="number" name="idade"> --> O type number serve exclusivamente para números;
+    <input type="email" name="nome"> --> O type email verifica se um e-mail é válido;
+    <input type="tel" name="nome"> --> O type tel para telefones, exibe um teclado personalizado em
+    navegadores mobile;
+
+    Identificar Input: Label;
+    A tag label é colocada ants de um input para identificar o campo para o usuário.
+
+    <label> Nome do input </label>
+    <input type="text" name="nome">
+
+    Placeholder
+    Inserimos o atributo placeholder e entre aspas colocamos o valor que será exibido dentro do input
+    O atributo placeholder não é compatível com o tipo date.
+
+    <input placeholder="Digite seu nome completo" type="text" name="nome" />
+
+    Quando digitamos algo no input, o texto do placeholder é ocultado.
+    Podemos tornar o input obrigatório adicionando o atributo required
+
+    <input placeholder="Digite seu nome completo" required type="text" name="nome" />
+
+    minlength e maxlength
+    minlength define a quantidade minima de caracteres
+    maxlength define a quantidade maxima de caracteres
+
+    CheckBox
+    <input type="checkbox" name="termos" value="aceito" />
+    value é o valor que será enviado para o backend caso o campo seja marcado.
+    
+    o checkbox tambem possui um atributo chamado checked, que faz o input vir marcado por padrao.
+    <input type="checkbox" name="termos" value="aceito" checked />
+
+    Para que dois ou mais checkbox estejam na mesma categoria, eles precisam ter o mesmo name.
+    <input type="checkbox" name="esporter[] value="futebol""/>
+    <label>Futebol</label>
+    <input type="checkbox" name="esporter[] value="volei""/>
+    <label>Volei</label>
+    <input type="checkbox" name="esporter[] value="basquete""/>
+    <label>Basquete</label>
+
+    Também é necessário ter o [] no final do name, para permitir o envio de multiplos valores para o back-end.
+    Sem o [] apenas o último checkbox selecionado, no nosso exemplo volei, seria enviado.
+
+    Quando queremos marcar apenas uma opcao, utilizamos o input radio
+    <input type="radio" name="resposta" id="animal-sim" value="sim" />
+    <label for="animal-sim">Sim</label>
+    <input type="radio" name="resposta" id="animal-nao" value="nao" />
+    <label for="animal-sim">Nao</label>
+
+*/
+tr:nth-last-child() {
+    background-color: blue;
+}
